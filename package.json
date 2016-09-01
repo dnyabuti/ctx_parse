@@ -1,0 +1,41 @@
+{
+  "name": "amf-parse",
+  "version": "0.0.1",
+  "description": "AMFest Parse Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node server.js",
+    "update-schema": "babel-node ./schema/updateSchema.js",
+    "lint": "lint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edukinara/amf-parse"
+  },
+  "author": "Edwin Kinara <edwinkinara@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.14.0",
+    "express": "^4.14.0",
+    "express-graphql": "^0.5.3",
+    "graphql": "^0.6.2",
+    "graphql-relay": "^0.4.2",
+    "isomorphic-fetch": "^2.2.1",
+    "kerberos": "0.0.21",
+    "parse": "^1.9.1",
+    "parse-dashboard": "^1.0.18",
+    "parse-server": "^2.2.18",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-2": "^6.13.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "babel-polyfill": "^6.13.0",
+    "eslint": "^3.3.1",
+    "morgan": "^1.7.0"
+  },
+  "engines": {
+    "node": ">=5.0",
+    "npm": ">=3.0"
+  }
+}
