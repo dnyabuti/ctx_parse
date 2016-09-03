@@ -15,7 +15,9 @@ import {
   DATABASE_URI,
   SERVER_URL,
   GRAPHIQL_ENABLED,
-  IS_DEVELOPMENT
+  IS_DEVELOPMENT,
+  GCM_SENDER_ID,
+  GCM_API_KEY
 } from './env';
 
 Parse.serverURL = SERVER_URL;
@@ -45,6 +47,12 @@ server.use(
     masterKey: MASTER_KEY,
     //fileKey: '',
     serverURL: SERVER_URL,
+    push: {
+      android: {
+        senderId: GCM_SENDER_ID,
+        apiKey: GCM_API_KEY
+      }
+    }
   })
 );
 
