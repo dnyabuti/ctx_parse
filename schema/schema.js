@@ -185,6 +185,10 @@ var AMFSessionType = new GraphQLObjectType({
       description: 'User\'s friends who attend this session',
       resolve: (session, args, {rootValue}) => loadFriendsAttending(rootValue, session),
     },
+    banner: {
+      type: GraphQLString,
+      resolve: (session) => session.get('banner') && session.get('banner').url(),
+    }
   }),
   interfaces: [nodeInterface],
 });

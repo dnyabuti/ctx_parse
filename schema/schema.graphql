@@ -5,12 +5,12 @@ schema {
 
 input AddToScheduleInput {
   sessionId: ID!
-  clientMutationId: String!
+  clientMutationId: String
 }
 
 type AddToSchedulePayload {
   session: Session
-  clientMutationId: String!
+  clientMutationId: String
 }
 
 type Artist implements Node {
@@ -85,6 +85,7 @@ type Session implements Node {
   artists: [Artist]
   isAdded: Boolean
   friends: [Friend]
+  banner: String
 }
 
 type User implements Node {
