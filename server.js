@@ -66,7 +66,7 @@ server.use(
         appId: APP_ID,
         masterKey: MASTER_KEY,
         appName: 'AMF-App',
-		production: !IS_DEVELOPMENT,
+		production: true,
       }
     ],
     'users': [
