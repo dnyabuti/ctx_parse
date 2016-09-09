@@ -170,7 +170,7 @@ var AMFSessionType = new GraphQLObjectType({
     },
     longDescription: {
       type: GraphQLString,
-      resolve: (session) => session.get('sessionLongDescription'),
+      resolve: (session) => session.get('longDescription'),
     },
     artists: {
       type: new GraphQLList(AMFArtistType),
