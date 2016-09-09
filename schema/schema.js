@@ -168,6 +168,10 @@ var AMFSessionType = new GraphQLObjectType({
       type: GraphQLString,
       resolve: (session) => session.get('sessionDescription'),
     },
+    longDescription: {
+      type: GraphQLString,
+      resolve: (session) => session.get('sessionLongDescription'),
+    },
     artists: {
       type: new GraphQLList(AMFArtistType),
       resolve: (session) =>

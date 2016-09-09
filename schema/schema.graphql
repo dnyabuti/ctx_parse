@@ -82,6 +82,7 @@ type Session implements Node {
   endTime: Float
   location: Map
   description: String
+  longDescription: String
   artists: [Artist]
   isAdded: Boolean
   friends: [Friend]

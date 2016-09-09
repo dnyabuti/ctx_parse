@@ -17,7 +17,9 @@ import {
   GRAPHIQL_ENABLED,
   IS_DEVELOPMENT,
   GCM_SENDER_ID,
-  GCM_API_KEY
+  GCM_API_KEY,
+  DASHBOARD_USERID,
+  DASHBOARD_PASSWORD,
 } from './env';
 
 Parse.serverURL = SERVER_URL;
@@ -66,13 +68,13 @@ server.use(
         appId: APP_ID,
         masterKey: MASTER_KEY,
         appName: 'AMF-App',
-		production: true,
+        production: true,
       }
     ],
     'users': [
       {
-        'user':'admin',
-        'pass':'$2a$08$UAS/umTbvoW1k5CwRJdlk.RfPon1TCXtqb2moDe81SpwWfSG5uR32'
+        'user': DASHBOARD_USERID,
+        'pass': DASHBOARD_PASSWORD,
       }
     ],
     'useEncryptedPasswords': true
