@@ -132,6 +132,18 @@ var AMFMapType = new GraphQLObjectType({
       type: GraphQLString,
       resolve: (map) => map.get('x1') && map.get('x1').url(),
     },
+    gMap: {
+      type: GraphQLBoolean,
+      resolve: (map) => map.get('gMap'),
+    },
+    lat: {
+      type: GraphQLString,
+      resolve: (map) => map.get('lat'),
+    },
+    long: {
+      type: GraphQLString,
+      resolve: (map) => map.get('long'),
+    }
   }),
 });
 

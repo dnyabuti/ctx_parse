@@ -42,6 +42,9 @@ type Map {
   id: ID!
   name: String
   map: String
+  gMap: Boolean
+  lat: String
+  long: String
 }
 
 type Mutation {
