@@ -101,3 +101,4 @@ server.use(
 server.listen(SERVER_PORT, () => console.log(
   `Server is now running in ${process.env.NODE_ENV || 'development'} mode on http://${SERVER_HOST}:${SERVER_PORT}`
 ));
+var parseLiveQueryServer = ParseServer.createLiveQueryServer(server);
