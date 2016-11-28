@@ -54,7 +54,10 @@ server.use(
         senderId: GCM_SENDER_ID,
         apiKey: GCM_API_KEY
       }
-    }
+    },
+    liveQuery: {
+      classNames: ['CTXkWh', 'CTXData'] // List of classes to support for query subscriptions
+    },
   })
 );
 
