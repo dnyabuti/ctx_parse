@@ -97,9 +97,11 @@ server.use(
 );
 
 //server.use('/', (req, res) => res.redirect('/graphql'));
+var httpServer = require('http').createServer(server);
 
-server.listen(SERVER_PORT, () => console.log(
+httpServer.listen(SERVER_PORT, () => console.log(
   `Server is now running in ${process.env.NODE_ENV || 'development'} mode on http://${SERVER_HOST}:${SERVER_PORT}`
 ));
 
-ParseServer.createLiveQueryServer(server);
+// Enable the Live Query real-time server
+ParseServer.createLiveQueryServer(httpServer);
