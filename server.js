@@ -56,7 +56,7 @@ server.use(
       }
     },
     liveQuery: {
-      classNames: ['CTXkWh', 'CTXData'] // List of classes to support for query subscriptions
+      classNames: ['CTXKWh', 'CTXData'] // List of classes to support for query subscriptions
     },
   })
 );
