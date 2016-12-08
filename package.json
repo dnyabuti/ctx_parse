@@ -23,7 +23,7 @@
     "isomorphic-fetch": "^2.2.1",
     "kerberos": "0.0.21",
     "parse": "^1.9.1",
-    "parse-dashboard": "^1.0.18",
+    "parse-dashboard": "1.0.19",
     "parse-server": "^2.2.18",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-stage-2": "^6.13.0"
