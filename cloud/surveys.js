@@ -8,11 +8,11 @@ var Survey = Parse.Object.extend('Survey');
 var SurveyResult = Parse.Object.extend('SurveyResult');
 
 Parse.Cloud.define('send_surveys', function(request, response) {
-  if (request.master) {
-    Parse.Cloud.useMasterKey();
-  } else {
-    return response.error('Need master key');
-  }
+  // if (request.master) {
+  //   Parse.Cloud.useMasterKey();
+  // } else {
+  //   return response.error('Need master key');
+  // }
 
   var sessionId = request.params.sessionId;
   if (!sessionId) {
@@ -38,7 +38,7 @@ Parse.Cloud.define('send_surveys', function(request, response) {
 });
 
 Parse.Cloud.define('surveys', function(request, response) {
-  Parse.Cloud.useMasterKey();
+  // Parse.Cloud.useMasterKey();
 
   var user = request.user;
   if (!user) {
@@ -59,7 +59,7 @@ Parse.Cloud.define('surveys', function(request, response) {
 });
 
 Parse.Cloud.define('submit_survey', function(request, response) {
-  Parse.Cloud.useMasterKey();
+  // Parse.Cloud.useMasterKey();
 
   var user = request.user;
   if (!user) {

@@ -2,7 +2,7 @@
 /* global Parse */
 
 Parse.Cloud.define('friends', function(request, response) {
-  Parse.Cloud.useMasterKey();
+  // Parse.Cloud.useMasterKey();
 
   var user = request.user;
   if (!user) {
