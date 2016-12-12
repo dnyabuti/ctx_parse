@@ -1,5 +1,7 @@
 # CarbonTax Parse Server
 
+This is an app to monitor energy usage...
+
 **Development**
 
 Update `env.js` in root of project with DEV settings:
