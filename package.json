@@ -1,5 +1,5 @@
 {
-  "name": "carbon-tax",
+  "name": "ctx_parse",
   "version": "1.0.0",
   "description": "CarbonTax Parse Server",
   "main": "server.js",
@@ -9,7 +9,7 @@
     "lint": "lint ."
   },
   "repository": {
-    "type": "git",
+    "type": "git"
   },
   "author": "Davis Nyabuti <davis.nyabuti@gmail.com>",
   "license": "MIT",
