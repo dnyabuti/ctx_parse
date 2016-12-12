@@ -1,4 +1,4 @@
-# AMFest Parse Server
+# CarbonTax Parse Server
 
 **Development**
 
