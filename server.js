@@ -1,8 +1,8 @@
 
 import path from 'path';
 import express from 'express';
-import graphQLHTTP from 'express-graphql';
-import {Schema} from './schema/schema';
+// import graphQLHTTP from 'express-graphql';
+// import {Schema} from './schema/schema';
 import Parse from 'parse/node';
 import {ParseServer} from 'parse-server';
 import ParseDashboard from 'parse-dashboard';
@@ -27,14 +27,14 @@ Parse.initialize(APP_ID);
 Parse.masterKey = MASTER_KEY;
 Parse.Cloud.useMasterKey();
 
-function getSchema() {
-  if (!IS_DEVELOPMENT) {
-    return Schema;
-  }
+// function getSchema() {
+//   if (!IS_DEVELOPMENT) {
+//     return Schema;
+//   }
 
-  delete require.cache[require.resolve('./schema/schema.js')];
-  return require('./schema/schema.js').Schema;
-}
+//   delete require.cache[require.resolve('./schema/schema.js')];
+//   return require('./schema/schema.js').Schema;
+// }
 
 const server = express();
 
@@ -49,12 +49,12 @@ server.use(
     masterKey: MASTER_KEY,
     //fileKey: '',
     serverURL: SERVER_URL,
-    push: {
-      android: {
-        senderId: GCM_SENDER_ID,
-        apiKey: GCM_API_KEY
-      }
-    },
+    // push: {
+    //   android: {
+    //     senderId: GCM_SENDER_ID,
+    //     apiKey: GCM_API_KEY
+    //   }
+    // },
     liveQuery: {
       classNames: ['CTXKWh', 'CTXData'] // List of classes to support for query subscriptions
     },
@@ -70,7 +70,7 @@ server.use(
         serverURL: '/parse',
         appId: APP_ID,
         masterKey: MASTER_KEY,
-        appName: 'AMF-App',
+        appName: 'CarbonTax',
         production: true,
       }
     ],
@@ -84,17 +84,17 @@ server.use(
   }, true)
 );
 
-server.use(
-  '/graphql',
-  graphQLHTTP((request) => {
-    return {
-      graphiql: GRAPHIQL_ENABLED,
-      pretty: GRAPHIQL_ENABLED,
-      schema: getSchema(),
-      rootValue: Math.random(), // TODO: Check credentials, assign user
-    };
-  })
-);
+// server.use(
+//   '/graphql',
+//   graphQLHTTP((request) => {
+//     return {
+//       graphiql: GRAPHIQL_ENABLED,
+//       pretty: GRAPHIQL_ENABLED,
+//       schema: getSchema(),
+//       rootValue: Math.random(), // TODO: Check credentials, assign user
+//     };
+//   })
+// );
 
 //server.use('/', (req, res) => res.redirect('/graphql'));
 var httpServer = require('http').createServer(server);
