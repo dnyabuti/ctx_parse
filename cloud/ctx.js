@@ -76,7 +76,7 @@ Parse.Cloud.beforeSave('CTXData', function (request, response) {
 });
 
 function getTime(_type) {
-  var date = new Date(new Date().getTime() - (3 * 60 * 60 * 1000));
+  var date = new Date(new Date().getTime() - (6 * 60 * 60 * 1000));
   var lDate = date.toLocaleDateString();
   var hours = date.getHours();
   if (_type === 0) {
