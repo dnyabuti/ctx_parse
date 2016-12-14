@@ -5,7 +5,7 @@ var CTXKWh = Parse.Object.extend('CTXKWh');
 
 Parse.Cloud.beforeSave('CTXData', function (request, response) {
   if (!(request.object.existed())) {
-    if (parseFloat(request.object.get('data'))) {
+    if (parseFloat(request.object.get('data'))>=0) {
       var newData = request.object.get('data');
       var grpId = request.object.get('groupId');
       console.log(newData);
